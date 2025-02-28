@@ -1,0 +1,34 @@
+html, body {
+    background-color: black;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+        "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+video, canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+#fps {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#fps:empty {
+    display: none;
+}
+
+#fps:after {
+    content: " fps";
+}

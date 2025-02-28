@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Baggage Detection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/async/3.2.0/async.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/inferencejs"></script>
+    <link rel="stylesheet" href="./main.css">
+    <script defer src="./main.js"></script>
+</head>
+<body class="bg-purple-700 text-white flex flex-col items-center justify-center min-h-screen p-4 loading">
+    
+    <h1 class="text-3xl font-bold mb-4">Baggage Detection on Video</h1>
+
+    <!-- Video Upload Input -->
+    <input type="file" id="videoUpload" accept="video/*" class="mb-4 p-2 bg-white text-black rounded-lg">
+
+    <!-- Video Container -->
+    <div class="relative w-96 h-96 bg-orange-500 rounded-lg shadow-lg">
+        <video id="video" class="absolute w-full h-full object-cover rounded-lg" controls></video>
+        <canvas id="canvas" class="absolute w-full h-full"></canvas>
+    </div>
+
+    <div class="mt-4">
+        <span class="font-bold text-lg">Detected Count: <span id="count">0</span></span>
+    </div>
+
+    <div id="fps" class="absolute bottom-4 left-4 text-lg"></div>
+
+</body>
+</html>
